@@ -59,8 +59,8 @@ namespace Main
             _watcher.NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.FileName;
             _watcher.Changed += (sender, e) => onFileChanged(e.FullPath);
             _watcher.Created += (sender, e) => onFileChanged(e.FullPath);
-            _watcher.Deleted += (sender, e) => onFileChanged(e.FullPath);
-            _watcher.Renamed += (sender, e) => { onFileChanged(e.FullPath); onFileChanged(e.OldFullPath); };
+            //_watcher.Deleted += (sender, e) => onFileChanged(e.FullPath);
+            //_watcher.Renamed += (sender, e) => { onFileChanged(e.FullPath); onFileChanged(e.OldFullPath); };
             _watcher.EnableRaisingEvents = true;
         }
 
